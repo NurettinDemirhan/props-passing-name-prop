@@ -1,12 +1,12 @@
 import React from 'react';
+import Age from './Age';
 
 class Welcome extends React.Component{
     constructor(props){
         super(props);
 
         this.state = {
-            name : props.name,
-            age : props.age
+            name : props.name
         };
     };
 
@@ -14,7 +14,7 @@ class Welcome extends React.Component{
         return(
             <div>
                 <p>Welcome, {this.props.name}!</p>
-                <p>Your age is {this.props.age}.</p>
+                <Age age="24" />
             </div>
         )
     };
