@@ -1,8 +1,17 @@
 import React from 'react';
 
+function renderAge(age){
+  return(
+    Number(age) >=18 
+    ? <p>Your age is {age}.</p>
+    : ""
+    )
+}
+
+
 const Age = (props) =>{
     return (
-      <p>Your age is {props.age}.</p>
-    );
+      renderAge(props.age)
+    )
 }
 export default Age;
