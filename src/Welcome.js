@@ -5,13 +5,17 @@ class Welcome extends React.Component{
         super(props);
 
         this.state = {
-            name : props.name
+            name : props.name,
+            age : props.age
         };
     };
 
     render(){
         return(
-            <p>Welcome, {this.props.name}!</p>
+            <div>
+                <p>Welcome, {this.props.name}!</p>
+                <p>Your age is {this.props.age}.</p>
+            </div>
         )
     };
 
