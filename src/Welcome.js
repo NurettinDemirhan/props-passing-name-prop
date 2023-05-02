@@ -15,7 +15,7 @@ class Welcome extends React.Component{
         return(
             <div>
                 <p>Welcome, {this.props.name}!</p>
-                { age && <Age age={18}/> }
+                {(age > 18 && age < 65) && <Age age={age} />}
                 
             </div>
         )
