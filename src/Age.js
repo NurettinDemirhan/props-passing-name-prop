@@ -1,17 +1,14 @@
 import React from 'react';
 
-function renderAge(age){
-  return(
-    Number(age) >=18 
-    ? <p>Your age is {age}.</p>
-    : ""
-    )
-}
-
-
-const Age = (props) =>{
+class Age extends React.Component {
+  render() {
+    const { age } = this.props;
     return (
-      renderAge(props.age)
-    )
+      <div>
+        {age >= 18 ? <p>Your age is {age}.</p> : <p>You are very young!</p>}
+      </div>
+    );
+  }
 }
+
 export default Age;
