@@ -11,11 +11,11 @@ class Welcome extends React.Component{
     };
 
     render(){
+        const { age } = this.props
         return(
             <div>
                 <p>Welcome, {this.props.name}!</p>
-                <Age age="24" />
-                <Age age="15" />
+                { age && <Age age={18}/> }
                 
             </div>
         )
